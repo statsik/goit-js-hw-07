@@ -1,9 +1,9 @@
 const defInput = document.getElementById("name-input");
 const defOutput = document.getElementById("name-output");
 defInput.addEventListener("input", (event) => {
-    if (event === "" || event === " "){
-    defOutput.textContent = "Anonymus";
-    }
-    defOutput.textContent = event.currentTarget.value.trim();
+    const input = event.currentTarget.value.trim();
+    if (input === "" || input === " "){
+        defOutput.textContent = "Anonymus";
+    } else defOutput.textContent = input;
 });
-console.log(defInput);
+console.log(defInput); 
